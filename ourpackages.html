@@ -1,0 +1,208 @@
+<?php include('./registration/connection.php') ?>
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="css/style.css">
+     <title>Document</title>
+ </head>
+ <body>
+    <a href="blogslist.html">
+        <h2 class="section-heading">Our Packages</h2>
+    </a>
+
+    <section>
+        <div class="card">
+            <div class="card-image">
+                <a href="#">
+                    <img src="img/taj.jpg" alt="Card Image">
+                </a>
+            </div>
+            <div class="card-description">
+                <a href="Delhi.html">
+                    <h3><?php
+                    $sql = "SELECT * FROM packages WHERE PID=1";
+                $result = $conn->query($sql);
+if ($result->num_rows > 0) {
+while($row = $result->fetch_assoc()) {
+    echo $row["PNAME"]. "<br>";
+}
+} else {
+echo "0 results";
+}
+?></h3>
+                </a>
+                <p>
+            
+                
+                <?php
+                $sql = "SELECT * FROM packages WHERE PID=1";
+                $result = $conn->query($sql);
+if ($result->num_rows > 0) {
+while($row = $result->fetch_assoc()) {
+    echo $row["PDESC"]. "<br>";
+}
+} else {
+echo "0 results";
+}
+?>
+                </p>
+                <a href="delhi.php" class="btn-readmore">BOOK NOW</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <a href="#">
+                    <img src="img/rajasthan.jpg" alt="Card Image">
+                </a>
+            </div>
+
+            <div class="card-description">
+                <a href="rajasthan.html">
+                    <h3><?php
+                $sql = "SELECT * FROM packages WHERE PID=2";
+                $result = $conn->query($sql);
+if ($result->num_rows > 0) {
+while($row = $result->fetch_assoc()) {
+    echo $row["PNAME"]. "<br>";
+}
+} else {
+echo "0 results";
+}
+?></h3>
+                </a>
+                <p>
+               
+                <?php
+                $sql = "SELECT * FROM packages WHERE PID=2";
+                $result = $conn->query($sql);
+if ($result->num_rows > 0) {
+while($row = $result->fetch_assoc()) {
+    echo $row["PDESC"]. "<br>";
+}
+} else {
+echo "0 results";
+}
+?>
+                </p>
+                <a href="rajasthan.html" class="btn-readmore">BOOK NOW</a>
+            </div>
+            <br>
+        </div>
+        <div class="card">
+            <div class="card-image">
+                <a href="#">
+                    <img src="img/tamilnadu.jpg" alt="Card Image">
+                </a>
+            </div>
+
+            <div class="card-description">
+                <a href="tamilnadu.html">
+                    <h3><?php
+                $sql = "SELECT * FROM packages WHERE PID=3";
+                $result = $conn->query($sql);
+if ($result->num_rows > 0) {
+while($row = $result->fetch_assoc()) {
+    echo $row["PNAME"]. "<br>";
+}
+} else {
+echo "0 results";
+}
+?></h3>
+                </a>
+                <p>
+                   
+                    <?php
+                $sql = "SELECT * FROM packages WHERE PID=3";
+                $result = $conn->query($sql);
+if ($result->num_rows > 0) {
+while($row = $result->fetch_assoc()) {
+    echo $row["PDESC"]. "<br>";
+}
+} else {
+echo "0 results";
+}
+?>
+                </p>
+                <a href="tamilnadu.html" class="btn-readmore">BOOK NOW</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+                <a href="#">
+                    <img src="img/kerala.jpg" alt="Card Image">
+                </a>
+            </div>
+            <div class="card-description">
+            <a href="kerala.html">
+                <h3><?php
+                $sql = "SELECT * FROM packages WHERE PID=4";
+                $result = $conn->query($sql);
+if ($result->num_rows > 0) {
+while($row = $result->fetch_assoc()) {
+    echo $row["PNAME"]. "<br>";
+}
+} else {
+echo "0 results";
+}
+?></h3>
+            </a>
+                <p>
+                   
+                    <?php
+                $sql = "SELECT * FROM packages WHERE PID=4";
+                $result = $conn->query($sql);
+if ($result->num_rows > 0) {
+while($row = $result->fetch_assoc()) {
+    echo $row["PDESC"]. "<br>";
+}
+} else {
+echo "0 results";
+}
+?>
+                </p>
+                <a href="kerala.html" class="btn-readmore">BOOK NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="blogslist.html">
+        <h2 class="section-heading">OUR SPECIAL PACKAGES</h2>
+    </a>
+
+    <section>
+        <div class="card">
+            <div class="card-image">
+                <a href="blogpost.html">
+                    <img src="img/pooja.jpg" alt="Card Image">
+                </a>
+            </div>
+
+            <div class="card-description">
+                <a href="blogpost.html">
+                    <h3>Spiritual Tour </h3>
+                </a>
+                <p>
+                    Faith is the key to spiritual growth and requires a deep and personal connection with God. 
+                     He wants to be the head of our hearts, king of our souls, and guide to our spirits. 
+                      By allowing Him free reign in these areas we create an opportunity for lasting intimacy with the Creator.
+                </p>
+                <a href="blogpost.html" class="btn-readmore">Know more</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <a href="blogpost.html">
+                    <img src="img/honey.jpg" alt="Card Image">
+                </a>
+            </div>
+
+ </body>
+ </html>
+ 
